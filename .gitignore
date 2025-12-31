@@ -1,0 +1,16 @@
+# Zig
+zig-cache/
+zig-out/
+
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Node (if used later)
+node_modules/
