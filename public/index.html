@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasm Snake - Zig + HTML5 Canvas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🐍 Wasm Snake</h1>
+            <p>High-performance logic and rendering in Zig</p>
+        </header>
+
+        <div class="game-area">
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas"></canvas>
+                <div id="overlay" class="hidden">
+                    <h2>GAME OVER</h2>
+                    <button onclick="resetGame()">Try Again</button>
+                </div>
+            </div>
+
+            <div class="score-panel">
+                <div class="stat-card">
+                    <span class="label">Score</span>
+                    <span id="scoreValue" class="value">0</span>
+                </div>
+
+                <div class="controls-hint">
+                    <h3>Controls</h3>
+                    <p>Use <b>Arrow Keys</b> or <b>WASD</b> to move.</p>
+                </div>
+
+                <div class="tech-card">
+                    <label style="cursor: pointer; display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="showGrid"> Show Grid
+                    </label>
+                </div>
+
+                <div class="tech-card">
+                    <h3>The Tech</h3>
+                    <ul>
+                        <li><b>Zig Engine</b>: Handles all game state.</li>
+                        <li><b>Memory Map</b>: Pixels rendered in Wasm.</li>
+                        <li><b>0-Copy</b>: Zero bridge overhead per frame.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

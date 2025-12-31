@@ -1,0 +1,131 @@
+:root {
+    --bg-dark: #0a0e14;
+    --panel-bg: #151b23;
+    --snake-green: #4ade80;
+    --text-glow: #7ee787;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e6edf3;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--snake-green);
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+}
+
+.game-area {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.canvas-wrapper {
+    position: relative;
+    border: 4px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    display: block;
+    width: 400px;
+    height: 400px;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 14, 20, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+#overlay.hidden {
+    display: none;
+}
+
+#overlay h2 {
+    color: #ff7b72;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.score-panel {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--panel-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    color: #8b949e;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-glow);
+}
+
+.tech-card {
+    background: #0d1117;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    border: 1px solid #21262d;
+}
+
+button {
+    background: var(--snake-green);
+    color: #0d1117;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
