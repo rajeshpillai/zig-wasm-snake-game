@@ -29,7 +29,7 @@ header {
 
 h1 {
     font-size: 3rem;
-    margin-top: 10px;
+    margin-top: 20px;
     color: var(--snake-green);
     text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
 }
