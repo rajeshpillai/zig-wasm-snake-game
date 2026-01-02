@@ -9,7 +9,7 @@ body {
     background-color: var(--bg-dark);
     color: #e6edf3;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    margin: 0;
+    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
